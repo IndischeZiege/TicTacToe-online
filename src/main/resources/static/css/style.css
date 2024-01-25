@@ -1,0 +1,90 @@
+*{
+	font-family: 'Arial', sans-serif;
+}
+body{
+	min-height:50vh;
+	margin:0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: clamp(1rem, 10vh, 4rem);
+}
+
+.spielanzeige,
+.endsrceen-text{
+	font-size: clamp(2rem,10vh,4rem);
+	text-align: center;
+    color: black;
+}
+
+.grid{
+	display: grid;
+	width: 600px;
+	aspect-ratio: 1/1;
+	max-width: 90%;
+	max-height: 50vh;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.felder{
+	display: flex;
+	background-color: transparent;
+	border: 0.1rem solid black;
+	aspect-ratio: 1/1;
+	justify-content: center;
+	align-items: center;
+	padding: 5%;
+}
+
+.felder::before,
+.felder::after{
+	content: "";
+	box-sizing: border-box;
+}
+
+.felder.so::before{
+	border: 1rem solid blue;
+	border-radius: 50%;
+	width: 100%;
+	height:100%;
+}
+
+.felder.sx::before,
+.felder.sx::after{
+	background-color: red;
+	width: 1rem;
+	height: 100%;
+}
+
+.felder.sx::before{transform:translateX(50%) rotate(45deg);}
+
+.felder.sx::after{transform:translateX(-50%) rotate(-45deg);}
+
+.endsrceen{
+	position:fixed;
+	background-color: rgba(0, 0, 0, 0.8);
+	inset:0;
+	color: gray;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: clamp(1rem,2vh,4rem);
+	opacity: 0;
+	pointer-events: none;
+}
+
+.endsrceen.visable{
+	opacity: 1;
+	pointer-events: all;
+}
+
+.restart{
+	font-size: 4rem;
+	border: none;
+	cursor: pointer;	
+}
+	
+
+
