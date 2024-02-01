@@ -23,12 +23,12 @@ public class TicTacToeApplication {
 //		return List.of("Hello World","1.Liste");
 //	}
 
-	@RestController
-	class HelloController{
-		@GetMapping("/")
-		String hello() {
-			return "Hello";
-		}
-	}
+//	@RestController
+//	class HelloController{
+//		@GetMapping("/")
+//		String hello() {
+//			return "Hello";
+//		}
+//	}
 
 }
