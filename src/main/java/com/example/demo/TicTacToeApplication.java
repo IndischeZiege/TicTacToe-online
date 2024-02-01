@@ -22,11 +22,13 @@ public class TicTacToeApplication {
 //	public List<String> hello() {
 //		return List.of("Hello World","1.Liste");
 //	}
-	
-//	@RequestMapping("/index")
-//	public String index() {
-//		return "index";
-//	}
 
+	@RestController
+	class HelloController{
+		@GetMapping("/")
+		String hello() {
+			return "Hello";
+		}
+	}
 
 }
